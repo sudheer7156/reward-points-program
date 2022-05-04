@@ -62,7 +62,6 @@ function rewardPointsCalculator(mockData) {
       finalResultForCustomer.push(row);
     });    
   }
-  console.log("🚀 ~ file: App.js ~ line 65 ~ rewardPointsCalculator ~ totalPointsByCustomer", totalPointsByCustomer)
   let totalByCustomer = [];
   for (customerKey in totalPointsByCustomer) {    
     totalByCustomer.push({
@@ -119,7 +118,6 @@ function App() {
   useEffect(() => { 
     fetch().then((data)=> {             
       const results = rewardPointsCalculator(data);
-      console.log("🚀 ~ file: App.js ~ line 119 ~ fetch ~ results", results)
       setTransactionsData(results);
     });
   },[]);
